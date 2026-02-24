@@ -12,13 +12,12 @@ body{
 /* Шапка */
 .header{
     display: flex;
-    font-size: 24px;
+    font-size: 20px;
     text-wrap: nowrap;
     padding: 0 15px;
     height: 70px;
     width: 100%;
     align-items: center;
-    
     background-color: #8D41D6;
 }
 
@@ -43,6 +42,8 @@ body{
 }
 
 .button-header{
+    text-decoration: none;
+    color: black;
     background-color: #8D41D6;
     border: none;
     border-radius: 5px;
@@ -53,4 +54,32 @@ body{
 
 .button-header:hover{
     background-color: #A069D6;
+}
+
+/* Баннер */
+.baner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    font-size: 24px;
+    height: 300px;
+    color: white;
+    background-color: #d1afff;
+
+}
+.baner-button{
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #A069D6;
+    font-size: 18px;
+}
+.baner-button:hover{
+    background-color: #8D41D6;
 }
