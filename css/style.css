@@ -1,85 +1,207 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: #e9e9e9;
+body {
+  background-color: #e9e9e9;
 }
-
 
 /* Шапка */
-.header{
-    display: flex;
-    font-size: 20px;
-    text-wrap: nowrap;
-    padding: 0 15px;
-    height: 70px;
-    width: 100%;
-    align-items: center;
-    background-color: #8D41D6;
+.header {
+  display: flex;
+  font-size: 20px;
+  text-wrap: nowrap;
+  padding: 0 15px;
+  height: 70px;
+  width: 100%;
+  align-items: center;
+  background-color: #8d41d6;
 }
 
-.header-left{
-    flex: 1;
-    display: flex;
-    align-items: center;
+.header-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
 
-.header-center{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.header-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.header-right{
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+.header-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.button-header{
-    text-decoration: none;
-    color: black;
-    background-color: #8D41D6;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 5px;
-    cursor: pointer;
+.button-header {
+  text-decoration: none;
+  color: black;
+  background-color: #8d41d6;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s, transform 0.3s;
 }
 
-.button-header:hover{
-    background-color: #A069D6;
+.button-header:hover {
+  transform: scale(1.1);
+  background-color: #a069d6;
 }
 
 /* Баннер */
-.baner{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-    font-size: 24px;
-    height: 300px;
-    color: white;
-    background-color: #d1afff;
+.baner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  font-size: 24px;
+  height: 300px;
+  color: white;
+  background-color: #d1afff;
+}
+.baner-button {
+  text-decoration: none;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #a069d6;
+  font-size: 18px;
+  transition: background-color 0.5s, transform 0.3s;
+}
+.baner-button:hover {
+  background-color: #8d41d6;
+  transform: scale(1.1);
+}
 
+/* Отдел с популярными товарами */
+.text-popular {
+  text-align: center;
+  margin-top: 20px;
+  padding: 50px;
 }
-.baner-button{
-    text-decoration: none;
-    color: white;
+.popular-cards {
+  display: flex;
+  flex-direction: row;
+  background-color: red;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.pcard {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #a069d6;
+}
+.pcard-info {
+  background-color: blue;
+}
+img {
+  height: 300px;
+  width: 275px;
+}
+
+/* Для мобилки */
+.menu-toggle {
+  display: none; /* На компах кнопку не видим */
+}
+
+@media (max-width: 768px) {
+  .menu-toggle,
+  .header-right .button-header {
+    background: #8d41d6;          
     border: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #A069D6;
+    border-radius: 5px;           
+    font-size: 24px;              
+    color: black;
+    padding: 10px;                
+    line-height: 1;               
+    cursor: pointer;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;              
+    transition: background-color 0.2s; 
+  }
+
+  .menu-toggle:hover,
+  .header-right .button-header:hover {
+    background-color: #a069d6;    
+  }
+
+  .menu-toggle {
+    order: 3;                     
+    flex: 0 1 auto;               
+    margin: 0;                    
+  }
+
+  .header-center {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #8d41d6;
+    z-index: 1000;
+    padding: 10px 0;
+  }
+
+  .header-center.active {
+    display: flex;
+  }
+
+  .button-header {
+    width: 90%;
+    text-align: center;
+    margin: 5px auto;
     font-size: 18px;
-}
-.baner-button:hover{
-    background-color: #8D41D6;
+  }
+
+  /* --- Левая часть (логотип) --- */
+  .header-left {
+    flex: 1;                      /* Занимает доступное пространство */
+    order: 1;
+    display: flex;
+    align-items: center;          /* Вертикальное центрирование */
+    justify-content: flex-start;  /* Логотип слева */
+  }
+
+  .header-left h2 {
+    font-size: 24px;
+    margin: 0;
+    line-height: 1;               /* Чтобы высота совпадала с кнопками */
+  }
+
+  /* --- Правая часть (контейнер для иконок) --- */
+  .header-right {
+    order: 2;
+    flex: 1;                      /* Занимает доступное пространство */
+    display: flex;
+    justify-content: center;      /* Центрируем иконки по горизонтали */
+    gap: 10px;                    /* Расстояние между иконками */
+    align-items: center;          /* Вертикальное центрирование */
+  }
+
+  /* Иконки внутри правой части (наследуют общие стили) */
+  .header-right .button-header {
+    /* Специфичные стили не нужны – всё уже задано выше */
+  }
 }

@@ -1,35 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru-RU">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Главная</title>
-</head>
-<body>
+  </head>
+  <body>
     <!--Шапка-->
 
     <header class="header">
-        <div class="header-left">
-            <h2>🛒 TechShop</h2>
-        </div>
-        <div class="header-center">
-            <a class="button-header" href="index.html">Главная</a>
-            <a class="button-header" href="catalog.html">Каталог</a>
-            <a class="button-header" href="about.html">О нас</a>
-        </div>
-        <div class="header-right">
-            <a class="button-header">🔍</a>
-            <a class="button-header">🛒</a>
-        </div>
+      <div class="header-left">
+        <h2>🛒 TechShop</h2>
+      </div>
+
+      <button class="menu-toggle" id="mobile-menu">☰</button>
+
+      <nav class="header-center" id="nav-menu">
+        <a class="button-header" href="index.html">Главная</a>
+        <a class="button-header" href="catalog.html">Каталог</a>
+        <a class="button-header" href="about.html">О нас</a>
+      </nav>
+      <div class="header-right">
+        <a class="button-header">🔍</a>
+        <a class="button-header">🛒</a>
+      </div>
     </header>
 
     <!--Баннер-->
     <div class="baner">
-        <h1 class="baner-head">TechShop</h1>
-        <p class="baner-main">Лучшая электроника по доступным ценам</p>
-        <a class="baner-button" href="catalog.html">Посмотреть Каталог</a>
+      <h1 class="baner-head">TechShop</h1>
+      <p class="baner-main">Лучшая электроника по доступным ценам</p>
+      <a class="baner-button" href="catalog.html">Посмотреть Каталог</a>
     </div>
 
-</body>
+    <!-- Popular items -->
+    <div class="">
+      <h1 class="text-popular">Популярные товары</h1>
+      <div class="popular-cards">
+        <div class="pcard">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyhdcj2J_IFa_An_GWdzD2VzXWreYEiSR--g&s" alt="#" />
+          <div class="pcard-info">
+            <h2>Наушники Sony WH-1000XMS</h2>
+            <p>Премиальные наушники с активным шумоподавлением</p>
+            <span>★★★★☆ (125)</span>
+            <h2>29.999₽</h2>
+            <button>В корзину</button>
+          </div>
+        </div>
+        <div class="pcard">
+          <img src="https://technolove.ru/upload/iblock/7e1/w03ah09xlfj4kn0dyuysliu2y12el3eh.jpg" alt="#" />
+          <div class="pcard-info">
+            <h2>iPhone 17 Pro Max 512GB</h2>
+            <p>Флагманский смартфон с титановым корпусом</p>
+            <span>★★★★★ (89)</span>
+            <h2>99.999₽</h2>
+            <button>В корзину</button>
+          </div>
+        </div>
+        <div class="pcard">
+          <img src="https://img.mvideo.ru/Big/30059148bb.jpg" alt="#" />
+          <div class="pcard-info">
+            <h2>MacBook Pro 14 MS Pro</h2>
+            <p>Профессиональный ноутбук для работы и творчества</p>
+            <span>★★★★☆ (120)</span>
+            <h2>129.999₽</h2>
+            <button>В корзину</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+      });
+    }
+  });
+</script>
+  </body>
 </html>
