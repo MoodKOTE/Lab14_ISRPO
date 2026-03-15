@@ -18,6 +18,8 @@ body {
   width: 100%;
   align-items: center;
   background-color: #8d41d6;
+  position: sticky;
+  top: 0;
 }
 
 .header-left {
