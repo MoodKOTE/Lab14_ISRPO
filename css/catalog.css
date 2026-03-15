@@ -59,7 +59,7 @@ body {
   background-color: #a069d6;
 }
 
-.button-header-choice{
+.button-header-choice {
   text-decoration: none;
   color: white;
   background-color: #a069d6;
@@ -70,57 +70,18 @@ body {
   cursor: pointer;
   scale: 1.1;
 }
-
-/* Баннер */
-.baner {
-  display: flex;
-  flex-direction: column;
+/* Каталог */
+.catalog-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  text-align: center;
+  align-items: stretch;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 10px;
-  font-size: 24px;
-  height: 300px;
-  color: white;
-  background-color: #d1afff;
-}
-
-.baner-button {
-  text-decoration: none;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  margin-top: 20px;
-  padding: 15px;
-  background-color: #a069d6;
-  font-size: 18px;
-  transition:
-    background-color 0.5s,
-    transform 0.3s;
-}
-
-.baner-button:hover {
-  background-color: #8d41d6;
-  transform: scale(1.1);
-}
-
-/* Отдел с популярными товарами */
-.text-popular {
-  text-align: center;
-  padding: 50px;
-}
-
-.popular-cards {
-  display: flex;
-  flex-direction: row;
-  /* background-color: red; */
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+  margin: 10px 300px;
   gap: 20px;
 }
 
-.pcard {
+.catalog-card {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -130,43 +91,47 @@ body {
   border: none;
   border-radius: 5px;
   max-width: 300px;
+  height: 100%;
 }
-
-.pcard-info {
+.catalog-card-info {
   background-color: white;
   border: none;
   border-radius: 5px;
   padding: 10px;
   max-width: 300px;
-}
+  min-height: 200px;
 
-.pcard-info h2 {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.catalog-card-info h2 {
   font-size: 20px;
-  text-wrap: nowrap;
+  text-wrap: wrap;
   padding: 10px;
 }
-
-.pcard-info p,
+.catalog-card-info p,
 span {
-  padding: 10px 0;
+  padding: 10px 10px;
 }
-
-.pcard-stars {
+.catalog-card-stars {
   color: rgb(233, 233, 0);
 }
 
-.pcard-info button {
+.catalog-card button {
   border: none;
   border-radius: 5px;
   padding: 5px;
   width: 100%;
   text-align: center;
   background-color: #96c5f7;
+  cursor: pointer;
   transition:
     background-color 0.5s,
     transform 0.3s;
 }
-.pcard-info button:hover {
+.catalog-card-info button:hover {
   background-color: #76b8fe;
   transform: scale(1.05);
 }
@@ -177,66 +142,14 @@ img {
   padding: 10px;
 }
 
-.pcard-button-to-page {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  border: 3px solid #8d41d6;
-  color: #8d41d6;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 10px;
-  margin: 50px 300px;
-  padding: 15px;
-  transition: transform 0.3s;
-}
-
-.pcard-button-to-page:hover {
-  transform: scale(1.1);
-}
-
-/* Преимущества */
-.advantages {
-  margin-bottom: 100px;
-}
-.advantages-header {
-  text-align: center;
-  margin-top: 100px;
-  margin-bottom: 40px;
-}
-.advantages-cards {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-.advantages-card {
-  margin: 10px;
-  border: 2px solid #8d41d6;
-  border-radius: 5px;
-  height: 250px;
-  width: 250px;
-  box-shadow: 10px 10px 20px #380c62;
-}
-.advantages-card-image {
-  font-size: 30px;
-  margin: 30px;
-}
-.advantages-card-info h2 {
-  margin-top: 10px;
-  margin-bottom: 15px;
-}
-
-.advantages-card-info p {
-  margin: 10px 10px;
-  color: rgb(117, 117, 117);
-}
-
 /* Footer */
 footer {
   background-color: rgb(44, 44, 44);
   color: #989898;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  /* position: absolute; */
 }
 hr {
   margin: 20px 10px;
@@ -275,7 +188,6 @@ hr {
   align-items: center;
 }
 
-/* Для мобилки */
 .menu-toggle {
   display: none;
   /* На компах кнопку не видим */

@@ -17,7 +17,7 @@
       <button class="menu-toggle" id="mobile-menu">☰</button>
 
       <nav class="header-center" id="nav-menu">
-        <a class="button-header" href="index.html">Главная</a>
+        <a class="button-header-choice" href="index.html">Главная</a>
         <a class="button-header" href="catalog.html">Каталог</a>
         <a class="button-header" href="about.html">О нас</a>
       </nav>
@@ -43,7 +43,7 @@
           <div class="pcard-info">
             <h2>Наушники Sony WH-1000XMS</h2>
             <p>Премиальные наушники с активным шумоподавлением</p>
-            <span>★★★★☆ (125)</span>
+            <span><span class="pcard-stars">★★★★☆</span> (125)</span>
             <h2>29.999₽</h2>
             <button>В корзину</button>
           </div>
@@ -53,7 +53,7 @@
           <div class="pcard-info">
             <h2>iPhone 17 Pro Max 512GB</h2>
             <p>Флагманский смартфон с титановым корпусом</p>
-            <span>★★★★★ (89)</span>
+            <span><span class="pcard-stars">★★★★★</span> (89)</span>
             <h2>99.999₽</h2>
             <button>В корзину</button>
           </div>
@@ -63,13 +63,85 @@
           <div class="pcard-info">
             <h2>MacBook Pro 14 MS Pro</h2>
             <p>Профессиональный ноутбук для работы и творчества</p>
-            <span>★★★★☆ (120)</span>
+            <span><span class="pcard-stars">★★★★☆ </span>(120)</span>
             <h2>129.999₽</h2>
             <button>В корзину</button>
           </div>
         </div>
       </div>
+      <a class="pcard-button-to-page" href="catalog.html">Смотреть все товары</a>
     </div>
+
+    <!-- Наши преимущества -->
+
+    <div class="advantages">
+      <h1 class="advantages-header">Наши преимущества</h1>
+      <div class="advantages-cards">
+        <div class="advantages-card">
+          <div class="advantages-card-image">
+            <h1>🚛</h1>
+          </div>
+          <div class="advantages-card-info">
+            <h2>Бесплатная доставка</h2>
+            <p>Доставка по всей России при заказе от 3000₽</p>
+          </div>
+        </div>
+
+        <div class="advantages-card">
+          <div class="advantages-card-image">
+            <h1>💳</h1>
+          </div>
+          <div class="advantages-card-info">
+            <h2>Безопасная оплата</h2>
+            <p>Все платежи защищены современными протоколами</p>
+          </div>
+        </div>
+
+        <div class="advantages-card">
+          <div class="advantages-card-image">
+            <h1>🎁</h1>
+          </div>
+          <div class="advantages-card-info">
+            <h2>Гарантия качества</h2>
+            <p>Официальная гарантия на все товары от производителей</p>
+          </div>
+        </div>
+
+        <div class="advantages-card">
+          <div class="advantages-card-image">
+            <h1>🤙</h1>
+          </div>
+          <div class="advantages-card-info">
+            <h2>Поддержка 24/7</h2>
+            <p>Наши специалисты всегда готовы помочь</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-cards">
+        <div class="footer-card">
+          <h3>О магазине</h3>
+          <p>TechShop - ваш надежный партнер в мире электроники с 2025 года.</p>
+        </div>
+        <div class="footer-card">
+          <h3>Контакты</h3>
+          <p>📧 info@techshop.com</p>
+          <p>📞 8(800)555-35-35</p>
+          <p>⛪ г.Волжский, ул.Пушкина, д.Колотушкина</p>
+        </div>
+        <div class="footer-card">
+          <h3>Мы в соцсетях</h3>
+          <a href="#" class="soc">VK</a>
+          <a href="#" class="soc">Telegram</a>
+          <a href="#" class="soc">WhatsApp</a>
+        </div>
+      </div>
+      <hr />
+      <p class="protect">© 2026 TechStore. Все права защищены.</p>
+    </footer>
     <script>
   document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('mobile-menu');
